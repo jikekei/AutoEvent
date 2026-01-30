@@ -1,6 +1,7 @@
 # AutoEvent（兼容更新版）
 
-AutoEvent 是一个用于 **SCP: Secret Laboratory** 的 Exiled 插件，可在服务器中 **自动运行各类小游戏（Mini-Games）**，为服务器提供更加丰富、有趣的自动化活动体验，适用于娱乐服、活动服及社区服务器。
+AutoEvent 是一个用于 SCPSL **SCP: Secret Laboratory** 的 Exiled 插件，可在服务器中 **自动运行各类小游戏（Mini-Games）**，为服务器提供更加丰富、有趣的自动化活动体验，适用于娱乐服、活动服及社区服务器。
+
 
 本项目基于原作者 **RisottoMan** 开发的 AutoEvent 插件进行修改与维护，**对插件进行了新版本兼容性适配**，使其能够在当前最新游戏版本与 Exiled 环境中正常运行。
 
