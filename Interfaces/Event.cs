@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using AutoEvent.API.Enums;
@@ -7,6 +7,7 @@ using MEC;
 using AutoEvent.API.Season;
 using AutoEvent.API.Season.Enum;
 using AutoEvent.Interfaces;
+using UnityEngine;
 
 namespace AutoEvent.Interfaces
 {
@@ -152,8 +153,25 @@ namespace AutoEvent.Interfaces
         if (this is IEventMap map && !string.IsNullOrEmpty(map.MapInfo.MapName) && (!checkIfAutomatic || map.MapInfo.SpawnAutomatically))
         {
             map.MapInfo.Map = Extensions.LoadMap(map.MapInfo.MapName, map.MapInfo.Position,  map.MapInfo.MapRotation, map.MapInfo.Scale);
+            if (map.MapInfo.Map is null)
+            {
+                DebugLogger.LogDebug($"[{Name}] Failed to load map \"{map.MapInfo.MapName}\". Schematic may not be installed on the server.", LogLevel.Warn, true);
+                string fallbackMap = GetFallbackMapName();
+                if (!string.IsNullOrEmpty(fallbackMap))
+                {
+                    Vector3 fallbackPos = GetFallbackMapPosition();
+                    map.MapInfo.MapName = fallbackMap;
+                    map.MapInfo.Position = fallbackPos;
+                    map.MapInfo.Map = Extensions.LoadMap(fallbackMap, fallbackPos, map.MapInfo.MapRotation, map.MapInfo.Scale);
+                    if (map.MapInfo.Map is not null)
+                        DebugLogger.LogDebug($"[{Name}] Using fallback map \"{fallbackMap}\".", LogLevel.Warn, true);
+                }
+            }
         }
     }
+
+    protected virtual string GetFallbackMapName() => null;
+    protected virtual Vector3 GetFallbackMapPosition() => new Vector3(0, 40f, 0f);
 
     /// <summary>
     /// Can be used to de-spawn the map.
@@ -268,11 +286,25 @@ namespace AutoEvent.Interfaces
             List<MapChance> maps = new();
             foreach (var map in this.InternalConfig.AvailableMaps)
             {
-                if (map.SeasonFlag == seasonFlags)
+                if (map.SeasonFlag == seasonFlags && map.Map is not null && !string.IsNullOrEmpty(map.Map.MapName))
                 {
                     maps.Add(map);
                 }
             }
+
+            // 只保留服务器上已安装的 schematic，避免选中未安装的季节地图导致地图不加载
+            List<MapChance> mapsExisting = new();
+            foreach (var map in maps)
+            {
+                if (Extensions.IsExistsMap(map.Map.MapName, out _))
+                    mapsExisting.Add(map);
+            }
+            if (mapsExisting.Count == 0)
+                return; // 无已安装地图，保留插件默认 MapInfo（如 35hp_2）
+            maps = mapsExisting;
+
+            if (maps.Count == 0)
+                return;
             
             if (this is IEventMap eventMap)
             {

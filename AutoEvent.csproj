@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
     <LangVersion>latest</LangVersion>
@@ -53,9 +53,13 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="NVorbis" Version="0.10.5" />
   </ItemGroup>
-<ItemGroup>
-    <Reference Include="MapEditorReborn" HintPath="$(SL_REFERENCES)\MapEditorReborn.dll" />
-    <Reference Include="AudioPlayerApi" HintPath="$(SL_REFERENCES)\AudioPlayerApi.dll" />
+<PropertyGroup>
+    <SL_REFERENCES_EXT Condition="'$(SL_REFERENCES_EXT)' == ''">$(SL_REFERENCES)</SL_REFERENCES_EXT>
+    <SL_REFERENCES_MER Condition="'$(SL_REFERENCES_MER)' == ''">$(SL_REFERENCES)</SL_REFERENCES_MER>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MapEditorReborn" HintPath="$(SL_REFERENCES_MER)\MapEditorReborn.dll" />
+    <Reference Include="AudioPlayerApi" HintPath="$(SL_REFERENCES_EXT)\AudioPlayerApi.dll" />
     <Reference Include="Assembly-CSharp" HintPath="$(SL_REFERENCES)\Assembly-CSharp.dll" />
     <Reference Include="Mirror" HintPath="$(SL_REFERENCES)\Mirror.dll" />
     <Reference Include="System" />

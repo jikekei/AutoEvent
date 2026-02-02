@@ -1,9 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\user123\\Downloads\\AutoEvent-9.12.0\\AutoEvent-9.12.0\\AutoEvent\\",
+  "WorkspaceRootPath": "C:\\Users\\user123\\Downloads\\AutoEvent-9.12.0\\AutoEvent\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3C3FC008-22E1-4B28-BA50-A241B30CC216}|AutoEvent.csproj|c:\\users\\user123\\downloads\\autoevent-9.12.0\\autoevent-9.12.0\\autoevent\\commands\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3C3FC008-22E1-4B28-BA50-A241B30CC216}|AutoEvent.csproj|c:\\users\\user123\\downloads\\autoevent-9.12.0\\autoevent\\debuglogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C3FC008-22E1-4B28-BA50-A241B30CC216}|AutoEvent.csproj|solutionrelative:debuglogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C3FC008-22E1-4B28-BA50-A241B30CC216}|AutoEvent.csproj|c:\\users\\user123\\downloads\\autoevent-9.12.0\\autoevent\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C3FC008-22E1-4B28-BA50-A241B30CC216}|AutoEvent.csproj|solutionrelative:config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C3FC008-22E1-4B28-BA50-A241B30CC216}|AutoEvent.csproj|c:\\users\\user123\\downloads\\autoevent-9.12.0\\autoevent\\commands\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C3FC008-22E1-4B28-BA50-A241B30CC216}|AutoEvent.csproj|solutionrelative:commands\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -19,10 +27,36 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "DebugLogger.cs",
+              "DocumentMoniker": "C:\\Users\\user123\\Downloads\\AutoEvent-9.12.0\\AutoEvent\\DebugLogger.cs",
+              "RelativeDocumentMoniker": "DebugLogger.cs",
+              "ToolTip": "C:\\Users\\user123\\Downloads\\AutoEvent-9.12.0\\AutoEvent\\DebugLogger.cs",
+              "RelativeToolTip": "DebugLogger.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T10:18:39.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Config.cs",
+              "DocumentMoniker": "C:\\Users\\user123\\Downloads\\AutoEvent-9.12.0\\AutoEvent\\Config.cs",
+              "RelativeDocumentMoniker": "Config.cs",
+              "ToolTip": "C:\\Users\\user123\\Downloads\\AutoEvent-9.12.0\\AutoEvent\\Config.cs",
+              "RelativeToolTip": "Config.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T10:18:31.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "List.cs",
-              "DocumentMoniker": "C:\\Users\\user123\\Downloads\\AutoEvent-9.12.0\\AutoEvent-9.12.0\\AutoEvent\\Commands\\List.cs",
+              "DocumentMoniker": "C:\\Users\\user123\\Downloads\\AutoEvent-9.12.0\\AutoEvent\\Commands\\List.cs",
               "RelativeDocumentMoniker": "Commands\\List.cs",
-              "ToolTip": "C:\\Users\\user123\\Downloads\\AutoEvent-9.12.0\\AutoEvent-9.12.0\\AutoEvent\\Commands\\List.cs",
+              "ToolTip": "C:\\Users\\user123\\Downloads\\AutoEvent-9.12.0\\AutoEvent\\Commands\\List.cs",
               "RelativeToolTip": "Commands\\List.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwYAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

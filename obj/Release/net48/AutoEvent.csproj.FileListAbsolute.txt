@@ -49,3 +49,9 @@ C:\Users\user123\Downloads\AutoEvent-9.12.0\AutoEvent-9.12.0\AutoEvent\obj\Relea
 C:\Users\user123\Downloads\AutoEvent-9.12.0\AutoEvent-9.12.0\AutoEvent\obj\Release\net48\AutoEvent.pdb
 C:\Users\user123\Downloads\AutoEvent-9.12.0\AutoEvent-9.12.0\AutoEvent\obj\Release\net48\AutoEvent.csproj.Fody.CopyLocal.cache
 C:\Users\user123\Downloads\AutoEvent-9.12.0\AutoEvent-9.12.0\AutoEvent\obj\Release\net48\AutoEvent.csproj.Fody.RuntimeCopyLocal.cache
+C:\Users\user123\Downloads\AutoEvent-9.12.0\AutoEvent\obj\Release\net48\AutoEvent.csproj.AssemblyReference.cache
+C:\Users\user123\Downloads\AutoEvent-9.12.0\AutoEvent\obj\Release\net48\AutoEvent.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user123\Downloads\AutoEvent-9.12.0\AutoEvent\obj\Release\net48\AutoEvent.csproj.CoreCompileInputs.cache
+C:\Users\user123\Downloads\AutoEvent-9.12.0\AutoEvent\obj\Release\net48\AutoEvent.sourcelink.json
+C:\Users\user123\Downloads\AutoEvent-9.12.0\AutoEvent\obj\Release\net48\AutoEvent.dll
+C:\Users\user123\Downloads\AutoEvent-9.12.0\AutoEvent\obj\Release\net48\AutoEvent.pdb

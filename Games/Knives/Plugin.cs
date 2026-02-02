@@ -1,4 +1,4 @@
-﻿using MEC;
+using MEC;
 using PlayerRoles;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,8 +38,25 @@ public class Plugin : Event<Config, Translation>, IEventSound, IEventMap
         _eventHandler = null;
     }
 
+    protected override string GetFallbackMapName() => "35hp_2";
+
     protected override void OnStart()
     {
+        if (MapInfo?.Map is null)
+            SpawnMap(false);
+        if (MapInfo?.Map is null)
+        {
+            // 季节地图可能未安装，回退到默认地图 35hp_2
+            string failedMap = MapInfo?.MapName ?? "?";
+            MapInfo.MapName = "35hp_2";
+            MapInfo.Position = new Vector3(0, 40f, 0f);
+            SpawnMap(false);
+            if (MapInfo?.Map is not null)
+                DebugLogger.LogDebug($"[{Name}] Map \"{failedMap}\" not found, using default map 35hp_2.", LogLevel.Warn, true);
+        }
+        if (MapInfo?.Map is null)
+            return;
+
         var count = 0;
         List<GameObject> spawnList = MapInfo.Map.AttachedBlocks.Where(r => r.name.Contains("Spawnpoint")).ToList();
         foreach (Player player in Player.List)
@@ -74,6 +91,8 @@ public class Plugin : Event<Config, Translation>, IEventSound, IEventMap
 
     protected override void CountdownFinished()
     {
+        if (MapInfo?.Map is null)
+            return;
         foreach(var wall in MapInfo.Map.AttachedBlocks.Where(x => x.name == "Wall"))
         {
             GameObject.Destroy(wall);
